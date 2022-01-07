@@ -1,0 +1,210 @@
+<MyOwnLabel@MDLabel>
+    font_size: '55sp'
+    haling: 'left'
+    valing: 'middle'
+    text_size: self.size
+
+
+<Container>:
+    rows: 6
+    number: number
+    button_1: button_1
+    button_2: button_2
+    button_3: button_3
+    button_4: button_4
+    button_5: button_5
+    button_6: button_6
+    button_7: button_7
+    button_8: button_8
+    button_9: button_9
+    button_0: button_0
+    button_AC: button_AC
+    button_multi: button_multi
+    button_plus: button_plus
+    button_minus: button_minus
+    button_div: button_div
+    button_point: button_point
+    button_equal: button_equal
+
+
+
+
+    GridLayout:
+        cols: 1
+        anchor_y: 'top'
+        size_hint: 1, 0.15
+        padding: 30
+        font_color: 119 / 255, 136 / 255, 153 / 255, 1
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            MyOwnLabel:
+                text: ''
+                id: number
+
+
+    BoxLayout:
+        size_hint: 0.9, 0.15
+        padding: [0, 0, 0, 0]
+        cols: 4
+
+        MDRaisedButton:
+            text: ' 7 '
+            id: button_7
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+
+            size_hint: 1, 1
+            on_release:
+                root.numeration('7')
+        MDRaisedButton:
+            text: ' 8 '
+            id: button_8
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('8')
+        MDRaisedButton:
+            text: ' 9 '
+            id: button_9
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('9')
+        MDRaisedButton:
+            text: ' x '
+            id: button_multi
+            font_size: '45sp'
+            md_bg_color: 255 / 255, 215 / 255, 0 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.operation('*')
+
+    BoxLayout:
+        size_hint: 0.9, 0.15
+        padding: [0, 0, 0, 0]
+        cols: 4
+
+        MDRaisedButton:
+            text: ' 4 '
+            id: button_4
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('4')
+        MDRaisedButton:
+            text: ' 5 '
+            id: button_5
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('5')
+        MDRaisedButton:
+            text: ' 6 '
+            id: button_6
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('6')
+        MDRaisedButton:
+            text: ' / '
+            id: button_div
+            font_size: '45sp'
+            md_bg_color: 255 / 255, 215 / 255, 0 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.operation('/')
+
+    BoxLayout:
+        size_hint: 0.9, 0.15
+        padding: [0, 0, 0, 0]
+        cols: 4
+
+        MDRaisedButton:
+            text: ' 1 '
+            id: button_1
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('1')
+        MDRaisedButton:
+            text: ' 2 '
+            id: button_2
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('2')
+        MDRaisedButton:
+            text: ' 3 '
+            id: button_3
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('3')
+        MDRaisedButton:
+            text: ' - '
+            id: button_minus
+            font_size: '65sp'
+            md_bg_color: 255 / 255, 215 / 255, 0 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.operation('-')
+
+    BoxLayout:
+        size_hint: 0.9, 0.15
+        padding: [0, 0, 0, 0]
+        cols: 4
+
+        MDRaisedButton:
+            text: ' 0 '
+            id: button_0
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('0')
+        MDRaisedButton:
+            text: ' . '
+            id: button_point
+            font_size: '65sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.numeration('.')
+        MDRaisedButton:
+            text: ' AC '
+            id: button_AC
+            font_size: '45sp'
+            md_bg_color: 119 / 255, 136 / 255, 153 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.cleaner('AC')
+        MDRaisedButton:
+            text: ' + '
+            id: button_plus
+            font_size: '45sp'
+            md_bg_color: 255 / 255, 215 / 255, 0 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.operation('+')
+
+    BoxLayout:
+        size_hint: 0.9, 0.15
+        padding: [0, 0, 0, 0]
+        MDRaisedButton:
+            text: ' = '
+            id: button_equal
+            font_size: '65sp'
+            md_bg_color: 255 / 255, 215 / 255, 0 / 255, 1
+            size_hint: 1, 1
+            on_release:
+                root.equal('=')
