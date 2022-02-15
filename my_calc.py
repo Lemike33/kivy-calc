@@ -65,21 +65,21 @@ class Container(GridLayout):
         if equal == '=':
             if Container.my_operations == '+':
                 res = float(Container.operand_1) + float(Container.operand_2)
-                self.number.text = str(res)
+                self.number.text = str(round(res, 2))
                 Container.my_operations = ''
                 Container.operand2.clear()
                 Container.operand_1 = float(res)
 
             elif Container.my_operations == '-':
                 res = float(Container.operand_1) - float(Container.operand_2)
-                self.number.text = str(res)
+                self.number.text = str(round(res, 2))
                 Container.my_operations = ''
                 Container.operand2.clear()
                 Container.operand_1 = float(res)
 
             elif Container.my_operations == '*':
                 res = float(Container.operand_1) * float(Container.operand_2)
-                self.number.text = str(res)
+                self.number.text = str(round(res, 2))
                 Container.my_operations = ''
                 Container.operand2.clear()
                 Container.operand_1 = float(res)
@@ -89,10 +89,12 @@ class Container(GridLayout):
                     self.number.text = 'Ошибка - нельзя делить на 0!'
                 else:
                     res = float(Container.operand_1) / float(Container.operand_2)
-                    self.number.text = str(res)
+                    self.number.text = str(round(res, 2))
                     Container.my_operations = ''
                     Container.operand2.clear()
                     Container.operand_1 = float(res)
+        else:
+            pass
 
     def cleaner(self, ac):
         if ac == 'AC':
